@@ -1,0 +1,30 @@
+.alert {
+  position: fixed;
+  top: 1rem;
+  z-index: 99999;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 20.75rem;
+  height: 6rem;
+  background-color: #f5f1e6;
+  border-left: 5px solid #bd9462;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
+  transition: all 0.5s;
+  &.show {
+    transition: 0.5s;
+    right: 0;
+  }
+
+  &.hide {
+    transition: 0.5s;
+    right: -20.75rem;
+  }
+
+  & .close-btn {
+    font-size: 1.5rem;
+    color: #d5b084;
+    background-color: #f5f1e6;
+  }
+}

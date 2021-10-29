@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+
+  //Logo
+  & .logo {
+    display: flex;
+    align-items: center;
+    background: url(../../assets/images/bg-logo.jpg);
+    background-position: left top;
+    background-repeat: no-repeat;
+    flex: 1;
+
+    & h1 {
+      font-size: 3rem;
+      line-height: 3rem;
+      color: #db9e29;
+    }
+  }
+
+  //Nav
+  & nav {
+    flex: 1;
+
+    & ul {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & li {
+        & a {
+          font-size: 1rem;
+          font-family: "UltraRegular";
+          color: #db9e29;
+        }
+      }
+    }
+  }
+
+  & .menu-item {
+    cursor: pointer;
+
+    &.selected {
+      border-bottom: 5px solid #a2b83c;
+    }
+  }
+}

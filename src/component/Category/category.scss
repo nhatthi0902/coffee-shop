@@ -1,0 +1,21 @@
+.category {
+  display: flex;
+  align-items: center;
+
+  & + .category {
+    margin-top: 3rem;
+  }
+
+  & .title {
+    flex: 2;
+  }
+
+  & .category-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-family: "UltraRegular";
+    color: #db9e29;
+    padding-bottom: 2px;
+    border-bottom: 0.25rem solid #db9e29;
+  }
+}

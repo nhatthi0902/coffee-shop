@@ -1,0 +1,34 @@
+.banner {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  align-items: center;
+
+  &.banner-home {
+    background-image: url("../../assets/images/headline-home.jpg");
+    height: 25rem;
+
+    & h1 {
+      font-family: "UltraRegular";
+      font-weight: bold;
+      font-size: 3rem;
+      line-height: 3rem;
+      color: #f9b94b;
+      text-shadow: 1px 5px #824622;
+      max-width: 80%;
+    }
+  }
+
+  &.banner-menu {
+    background-image: url("../../assets/images/headline-blog.jpg");
+    height: 15rem;
+    & h1 {
+      font-family: "UltraRegular";
+      font-weight: bold;
+      font-size: 2rem;
+      line-height: 2rem;
+      color: #d1a36b;
+      max-width: 80%;
+    }
+  }
+}

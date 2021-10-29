@@ -1,0 +1,149 @@
+@import "./variables";
+@import "./reboot";
+@import "./grid";
+
+body {
+  background: url(../images/bg-body.jpg) repeat center top;
+  color: #d5b084;
+  font-family: "open_sansregular";
+  font-size: 1rem;
+}
+
+#root {
+  width: 100%;
+}
+
+main {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  background-color: #f5f1e6;
+}
+
+/*Common*/
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.btn {
+  font-family: "UltraRegular";
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  color: #f6f1e7;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-hot {
+  background-color: #d9534f;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.showcase {
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.product {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.product img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.product .name,
+.product .price {
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.product .price {
+  font-size: 1rem;
+  line-height: 1rem;
+  color: #bfcb75;
+}
+
+.product .name {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.product:hover {
+  transform: scale(1.05);
+  box-shadow: 1px 1px 1px 1px rgb(189, 148, 98 / 10%);
+}
+
+/*FOOTER*/
+
+.social i {
+  color: #e0ceab;
+  font-size: 1.5rem;
+}
+
+.social + .social {
+  margin-left: 1rem;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.header .cart {
+  padding: 0 0.625rem 0 0;
+}
+
+.cart-icon {
+  position: relative;
+  & .badge {
+    position: absolute;
+    top: -0.125rem;
+    right: 0.25rem;
+  }
+
+  & span {
+    font-size: 2rem;
+  }
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input::placeholder {
+  color: #e0ceab;
+}
