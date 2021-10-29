@@ -12,7 +12,7 @@ export default function NavigationItem({ data, onSelected, cart }) {
   if (data.cart)
     if(cart.totalItem>0){
     return (
-      <li className="menu-item cart">
+      <li className="menu-item cart-btn">
         <Link onClick={handleOnClick} to={data.to}>
           <ShoppingCartOutlined />
           <Badge number={cart.totalItem} />
