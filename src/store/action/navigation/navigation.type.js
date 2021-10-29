@@ -1,0 +1,1 @@
+export const ACT_NAVIGATE = 'ACT_NAVIGATE'

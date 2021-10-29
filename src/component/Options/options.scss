@@ -1,0 +1,25 @@
+.options {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  & .option {
+    width: 2.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "UltraRegular";
+    color: #d5b084;
+    background-color: #f5f1e6;
+    border: 1px solid #d5b084;
+
+    & + .option {
+      border-left: 0;
+    }
+
+    &.selected {
+      background-color: #bd9462;
+      color: #f5f1e6;
+    }
+  }
+}

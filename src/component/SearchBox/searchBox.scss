@@ -1,0 +1,43 @@
+.search-box {
+  display: inline-flex;
+  justify-content: flex-end;
+  margin-bottom: 2rem;
+  position: relative;
+
+  & input {
+    border: 0;
+    padding-left: 0;
+    padding-top: 0.5rem;
+    font-size: 1rem;
+    line-height: 1rem;
+    border: 0;
+    outline: none;
+    color: #d5b084;
+    background: #f5f1e6;
+    border-top: 0 !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    border-bottom: 3px solid #e0ceab !important;
+    transition: all 0.2s;
+  }
+
+  & input::placeholder {
+    color: #e0ceab;
+  }
+
+  & input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 1em;
+    width: 1em;
+    border-radius: 50em;
+    background: url("../../assets/images/times-circle.svg") no-repeat 50% 50%;
+    background-size: contain;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  & input[type="search"]:focus::-webkit-search-cancel-button {
+    opacity: 0.8;
+    pointer-events: all;
+  }
+}

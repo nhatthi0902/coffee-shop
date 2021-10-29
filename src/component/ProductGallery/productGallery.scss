@@ -1,0 +1,31 @@
+.product-gallery {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  display: flex;
+
+  .gallery-item {
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    & + .gallery-item {
+      margin-left: 1rem;
+    }
+
+    & img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.selected {
+      opacity: 1;
+    }
+  }
+}

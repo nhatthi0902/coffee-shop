@@ -1,0 +1,47 @@
+.quantity {
+  display: flex;
+  align-items: center;
+
+  & .quantity-btn {
+    width: 2.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d5b084;
+    background-color: #f5f1e6;
+    border: 1px solid #d5b084;
+
+    &:hover {
+      color: #f5f1e6;
+      background-color: #d5b084;
+    }
+
+    &:active {
+      background-color: #bd9462;
+    }
+  }
+
+  & .quantity-number {
+    width: 2.5rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #bd9462;
+    font-family: "UltraRegular";
+    border-top: 1px solid #d5b084;
+    border-bottom: 1px solid #d5b084;
+  }
+
+  &.small {
+    & .quantity-btn {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+    & .quantity-number {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
