@@ -9,7 +9,8 @@ function Home() {
         content="Maecenas pharetra hendrerit eros sed laoreet."
       />
       <Section className="showcase hot-showcase">
-        <div className="title">
+       <div className="d-flex">
+       <div className="title">
           <img src="/images/whats-hot.jpg" />
           <a className="btn btn-hot">Find out more</a>
         </div>
@@ -30,6 +31,7 @@ function Home() {
             </a>
           </li>
         </ul>
+       </div>
       </Section>
       <Section className="showcase blogs-showcase">
         <ul className="hot-blogs">
