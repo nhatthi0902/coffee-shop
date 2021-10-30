@@ -11,7 +11,6 @@ export function getAllProvinceAsync(){
 export function getAllDistictByProvinceAsync(provinceCode){
     return async (dispatch) => {
         const result  = await utilServices.getAllDistrictByProvince(provinceCode) 
-        console.log("RESULT FROM ACT ASYNC: ",result)
         dispatch(getAllDistictByProvince(result));
       };
 }

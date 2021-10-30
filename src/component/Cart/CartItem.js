@@ -1,20 +1,33 @@
-import Button from '../Button'
-import Quantity from '../Quantity'
-export default function CartItem(){
-    return(<li className="cart-item">
-        <div className="cart-item-image">
-            <img src="./images/coffee1.jpg" alt=""/>
+import Button from "../Button";
+import Quantity from "../Quantity";
+import NumberFormat from "react-number-format";
+export default function CartItem({ data }) {
+  return (
+    <li className="cart-item">
+      <div className="cart-item-image">
+        <img src={data.imageUrl} alt="" />
+      </div>
+      <div className="cart-item-info">
+        <p className="cart-item-info-name">{data.name}</p>
+        <div className="cart-item-info-size">
+          <span>Size: </span>
+          <span>
+            <strong>{data.size}</strong>
+          </span>
         </div>
-        <div className="cart-item-info">
-            <p className="cart-item-info-name">Cà phê sữa</p>
-            <div className="cart-item-info-size">
-                <span>Size: </span><span><strong>M</strong></span>
-            </div>
-            <Quantity currentQuantity={2} size="small"/>
-        </div>
-        <div className="cart-item-action">
-            <Button extendClass={"btn-delete-cart-item"}>Xoá</Button>
-            <span className="cart-item-price">15,000</span>
-        </div>
-    </li>)
+        <Quantity currentQuantity={data.quantity} size="small" />
+      </div>
+      <div className="cart-item-action">
+        <Button extendClass={"btn-delete-cart-item"}>Xoá</Button>
+        <span className="cart-item-price">
+          <NumberFormat
+            value={data.price}
+            displayType={"text"}
+            thousandSeparator={true}
+            prefix={"đ"}
+          />
+        </span>
+      </div>
+    </li>
+  );
 }

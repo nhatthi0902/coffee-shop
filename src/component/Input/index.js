@@ -4,7 +4,8 @@ import classNames from "classnames";
 import { htmlType } from "../../utilities/constant";
 import Button from "../Button";
 import { DownOutlined, UpOutlined } from "@ant-design/icons";
-export default function Input({
+import Options from "./Options";
+ export default function Input({
   onChange,
   value,
   type,
@@ -18,7 +19,7 @@ export default function Input({
   controlType,
   dropdownData,
   id
-}) {
+}){
   const classes = classNames("input", extendClass);
   const inputEl = useRef(null);
   const [showOptions, setShowOptions] = useState(false);
@@ -38,13 +39,13 @@ export default function Input({
     console.log(option);
   }
 
-  function handleShowOptions() {
-    setShowOptions(!showOptions);
+  function handleShowOptions(status) {
+    setShowOptions(status);
   }
 
   function handleOnFocus(id) {
+    setShowOptions(true);
     onFocus(id);
-    handleShowOptions();
   }
 
   switch (controlType) {
@@ -90,26 +91,13 @@ export default function Input({
               <span className="dropdown-placeholder">{placeholder}</span>
             )}
           </div>
-          <Button extendClass="toggle-btn" onClick={()=>{handleOnFocus(id)}}>
-            {!showOptions && <DownOutlined />}
-            {showOptions && <UpOutlined />}
+          <Button extendClass="toggle-btn" onClick={(e)=>{e.preventDefault();
+          }}>
+            {(!showOptions||dropdownData.length===0) && <DownOutlined />}
+            {(showOptions&& dropdownData.length>0) && <UpOutlined />}
           </Button>
-          {showOptions && (
-            <ul className="dropdown-option-list">
-              {dropdownData.map((item, index) => {
-                return (
-                  <li
-                    className="dropdown-option-list-item"
-                    onClick={() => {
-                      handleOnSelectOption(item);
-                    }}
-                    key={index}
-                  >
-                    {item.name}
-                  </li>
-                );
-              })}
-            </ul>
+          {(showOptions&&dropdownData.length>0) && (
+            <Options options = {dropdownData} onSelect = {handleOnSelectOption} onShow = {handleShowOptions}/>
           )}
         </div>
       );

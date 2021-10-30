@@ -11,20 +11,20 @@ import {
   getAllDistictByProvinceAsync,
   getAllWardByDistrictAsync,
 } from "../../store/action/util/asyncAction";
+import { resetAllDistrct, resetAllWard } from "../../store/action/util/action";
 export default function ShipmentInfo() {
   const [fullName, setFullname] = useState("");
   const [phoneNumber, setPhoneNumber] = useState("");
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
-  const [city, setCity] = useState({ name: "", code: 1 });
-  const [district, setDistrict] = useState({ name: "", code: 1 });
-  const [ward, setWard] = useState({ name: "", code: 1 });
+  const [city, setCity] = useState({ name: "", code: 0 });
+  const [district, setDistrict] = useState({ name: "", code: 0 });
+  const [ward, setWard] = useState({ name: "", code: 0 });
   const [note, setNote] = useState("");
   const dispatch = useDispatch();
   const provinces = useSelector((state) => state.utilReducer.provinces);
   const districts = useSelector((state) => state.utilReducer.districts);
   const wards = useSelector((state) => state.utilReducer.wards);
-  console.log("DATA FROM STORE: ", districts);
 
   function getFullName(fullName) {
     setFullname(fullName);
@@ -44,14 +44,14 @@ export default function ShipmentInfo() {
 
   function getCity(city) {
     let newCity = { name: city.name, code: city.code };
-    setDistrict({ name: "", code: 1 });
-    setWard({ name: "", code: 1 });
+    setDistrict({ name: "", code: 0 });
+    setWard({ name: "", code: 0 });
     setCity(newCity);
   }
 
   function getDistrict(district) {
     let newDistrict = { name: district.name, code: district.code };
-    setWard({ name: "", code: 1 });
+    setWard({ name: "", code: 0 });
     setDistrict(newDistrict);
   }
 
@@ -68,12 +68,19 @@ export default function ShipmentInfo() {
     switch (id) {
       case "province":
         dispatch(getAllProvinceAsync());
+        dispatch(resetAllDistrct());
+        dispatch(resetAllWard());
         break;
       case "district":
-        dispatch(getAllDistictByProvinceAsync(city.code));
+        if (city.code !== 0) {
+          dispatch(getAllDistictByProvinceAsync(city.code));
+          dispatch(resetAllWard());
+        }
         break;
       case "ward":
-        dispatch(getAllWardByDistrictAsync(district.code));
+        if (district.code !== 0) {
+          dispatch(getAllWardByDistrictAsync(district.code));
+        }
         break;
       default:
     }

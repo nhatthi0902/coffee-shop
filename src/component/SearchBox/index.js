@@ -32,7 +32,6 @@ export default function SearchBox({ onSearch }) {
   }
 
   function onSuggestionSelected(selection) {
-    console.log("selection: ", selection);
     setsearchValue(selection);
     setShowSuggestion(false);
     document.getElementById("input-field").focus();

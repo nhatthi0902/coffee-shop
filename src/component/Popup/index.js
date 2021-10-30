@@ -50,7 +50,14 @@ export default function Popup({ product, onClosePopup, onAddToCart }) {
   }
 
   function addToCart() {
-    dispatch(actAddCart({}));
+    let cartItem ={
+      name:product.name,
+      imageUrl: product.gallery[selectedImage],
+      quantity: currentQuantity,
+      size: selectedOption,
+      price: currentPrice
+    }
+    dispatch(actAddCart(cartItem));
     onAddToCart(product)
     onClosePopup(true);
   }
