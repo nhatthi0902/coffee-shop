@@ -9,6 +9,7 @@ import Popup from "../../component/Popup";
 import { actGetAllProductPerPage } from "../../store/action/product/action";
 import { actNavigate } from "../../store/action/navigation";
 import Alert from "../../component/Alert";
+import { Link } from "react-router-dom";
 export default function Menu() {
   const [showPopUp, setShowPopUp] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState(null);
@@ -85,7 +86,7 @@ export default function Menu() {
       )}
       {showAlert && (
         <Alert onClose={closeAlert} isShow={showAlert}>
-          Đã thêm <strong>{alertMessage}</strong> vào giỏ hàng
+          Đã thêm <Link to="/order"><strong>{alertMessage}</strong></Link> vào giỏ hàng
         </Alert>
       )}
     </>

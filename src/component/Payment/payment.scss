@@ -1,0 +1,35 @@
+.payment {
+  margin-top: 1rem;
+  width: 100%;
+  & .payment-item {
+    padding: 1rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    border: 1px solid #e0ceab;
+    transition: all 0.2s;
+    cursor: pointer;
+
+    & + .payment-item {
+      margin-top: 1rem;
+    }
+
+    & .payment-title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+
+    &:hover {
+      border: 1px solid #d5b084;
+    }
+    &.selected {
+      color: #f5f1e6;
+      border: 1px solid #d5b084;
+      background-color: #e0ceab;
+    }
+  }
+}

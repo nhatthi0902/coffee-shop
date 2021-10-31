@@ -20,17 +20,29 @@
   &.btn-primary {
     color: #ffffff;
     background-color: #bd9462;
-    background-color: 1px solid #bd9462;
+    border: 1px solid #bd9462;
   }
 
   &:hover {
     background-color: #d5b084;
-    background-color: 1px solid #d5b084;
+    border: 1px solid #d5b084;
   }
 
   &:focus {
     background-color: #d5b084;
-    background-color: 1px solid #d5b084;
+    border: 1px solid #d5b084;
     outline: none;
+  }
+
+  &:disabled {
+    color: #ffffff;
+    background-color: #bfbfbf;
+    user-select: none;
+    cursor: default;
+    opacity: 0.4;
+    &:hover {
+      background-color: #bfbfbf;
+      border: 1px solid #bfbfbf;
+    }
   }
 }

@@ -8,11 +8,13 @@ const initialState = {
   currentPage: 1,
   currentList: [
     {
+      id:1,
       category: "hot",
       imgTitle: true,
       extendClass: "hot",
       products: [
         {
+          id:1,
           name: "Cà phê sữa",
           image: "./images/coffee1.jpg",
           price: 15000,
@@ -23,6 +25,7 @@ const initialState = {
           ],
         },
         {
+          id:2,
           name: "Cà phê sữa",
           image: "./images/coffee2.jpg",
           price: 15000,
@@ -33,6 +36,7 @@ const initialState = {
           ],
         },
         {
+          id:3,
           name: "Cà phê sữa",
           image: "./images/coffee3.jpg",
           price: 15000,
@@ -45,11 +49,13 @@ const initialState = {
       ],
     },
     {
+      id:2,
       category: "Coffee",
       imgTitle: false,
       extendClass: "",
       products: [
         {
+          id:4,
           name: "Cà phê sữa",
           image: "./images/coffee4.jpg",
           price: 15000,
@@ -60,6 +66,7 @@ const initialState = {
           ],
         },
         {
+          id:5,
           name: "Cà phê sữa",
           image: "./images/coffee4.jpg",
           price: 15000,
@@ -70,6 +77,7 @@ const initialState = {
           ],
         },
         {
+          id:6,
           name: "Cà phê sữa",
           image: "./images/coffee4.jpg",
           price: 15000,
@@ -82,11 +90,13 @@ const initialState = {
       ],
     },
     {
+      id:3,
       category: "Tea",
       imgTitle: false,
       extendClass: "",
       products: [
         {
+          id:7,
           name: "Cà phê sữa",
           image: "./images/coffee4.jpg",
           price: 15000,
@@ -97,6 +107,7 @@ const initialState = {
           ],
         },
         {
+          id:8,
           name: "Cà phê sữa",
           image: "./images/coffee4.jpg",
           price: 15000,
@@ -107,6 +118,7 @@ const initialState = {
           ],
         },
         {
+          id:9,
           name: "Cà phê sữa",
           image: "./images/coffee4.jpg",
           price: 15000,

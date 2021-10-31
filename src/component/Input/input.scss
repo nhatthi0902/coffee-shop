@@ -63,6 +63,10 @@
       font-size: 1rem;
       color: #bd9462;
       background-color: #f5f1e6;
+
+      &:hover {
+        border: 1px solid #f5f1e6 !important;
+      }
     }
 
     & .dropdown-option-list {
@@ -88,6 +92,18 @@
           background-color: #d5b084;
         }
       }
+    }
+  }
+
+  &:hover {
+    & input {
+      border: 1px solid #b6a482;
+    }
+    & textarea {
+      border: 1px solid #b6a482;
+    }
+    & .dropdown-value {
+      border: 1px solid #b6a482;
     }
   }
 }

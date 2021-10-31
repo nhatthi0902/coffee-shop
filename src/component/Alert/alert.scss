@@ -12,6 +12,10 @@
   border-left: 5px solid #bd9462;
   box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px;
   transition: all 0.5s;
+  & a {
+    color: #d5b084;
+    font-weight: bold;
+  }
   &.show {
     transition: 0.5s;
     right: 0;

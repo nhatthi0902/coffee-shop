@@ -11,6 +11,7 @@ import Quantity from "../Quantity";
 import ProductGallery from "../ProductGallery";
 import { actAddCart } from "../../store/action/cart";
 import NumberFormat from "react-number-format";
+import { v4 as uuidv4 } from "uuid";
 
 export default function Popup({ product, onClosePopup, onAddToCart }) {
   const options = ["M", "L"];
@@ -50,15 +51,16 @@ export default function Popup({ product, onClosePopup, onAddToCart }) {
   }
 
   function addToCart() {
-    let cartItem ={
-      name:product.name,
+    let cartItem = {
+      id: uuidv4(),
+      name: product.name,
       imageUrl: product.gallery[selectedImage],
       quantity: currentQuantity,
       size: selectedOption,
-      price: currentPrice
-    }
+      price: currentPrice * currentQuantity,
+    };
     dispatch(actAddCart(cartItem));
-    onAddToCart(product)
+    onAddToCart(product);
     onClosePopup(true);
   }
 
@@ -68,7 +70,12 @@ export default function Popup({ product, onClosePopup, onAddToCart }) {
       <div className="popup">
         <div className="content">
           <div className="popup-header">
-            <Button extendClass="btn-close" onClick={()=>{onClosePopup(false)}}>
+            <Button
+              extendClass="btn-close"
+              onClick={() => {
+                onClosePopup(false);
+              }}
+            >
               <CloseOutlined />
             </Button>
           </div>
