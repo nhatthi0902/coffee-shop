@@ -123,14 +123,8 @@ export default function ShipmentInfo() {
           controlType={htmlType.INPUT}
           onChange={getEmail}
         />
-        <Input
-          label="Địa chỉ:"
-          type="text"
-          controlType={htmlType.INPUT}
-          onChange={getAddress}
-        />
         <Row>
-          <Col xs={12} lg={4}>
+        <Col xs={12}>
             <Input
               label="Tỉnh/Thành Phố:"
               extendClass="dropdown-value"
@@ -143,7 +137,7 @@ export default function ShipmentInfo() {
               id="province"
             />
           </Col>
-          <Col xs={12} lg={4}>
+        <Col xs={12}>
             <Input
               label="Quận/Huyện:"
               placeholder="Chọn quận/huyện..."
@@ -155,7 +149,7 @@ export default function ShipmentInfo() {
               id="district"
             />
           </Col>
-          <Col xs={12} lg={4}>
+        <Col xs={12}>
             <Input
               label="Xã/Phường:"
               placeholder="Chọn Xã/phường..."
@@ -168,6 +162,12 @@ export default function ShipmentInfo() {
             />
           </Col>
         </Row>
+        <Input
+          label="Địa chỉ:"
+          type="text"
+          controlType={htmlType.INPUT}
+          onChange={getAddress}
+        />
         <Input
           label="Ghi chú:"
           type="text"

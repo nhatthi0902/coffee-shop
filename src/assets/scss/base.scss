@@ -151,3 +151,25 @@ a {
 input::placeholder {
   color: #e0ceab;
 }
+
+.table {
+  width: 100%;
+  background-color: transparent;
+  margin-bottom: 1rem;
+  border-collapse: collapse;
+}
+
+.table,
+th,
+td {
+  border: 1px solid #d5b084;
+}
+
+.table th,
+.table td {
+  padding: 1rem;
+}
+
+.fw-bold {
+  font-weight: bold !important;
+}

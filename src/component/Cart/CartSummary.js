@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import NumberFormat from "react-number-format";
+import { actUpdateCartAmount } from "../../store/action/cart";
 export default function CartSummary({
   cart,
   shiping,
@@ -8,7 +10,7 @@ export default function CartSummary({
 }) {
   const [subToltal, setSubToltal] = useState(0);
   const [total, setTotal] = useState(0);
-
+  const dispatch = useDispatch()
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     let subTotal = 0;
@@ -19,6 +21,11 @@ export default function CartSummary({
     if (total < 0) total = 0;
     setSubToltal(subTotal);
     setTotal(total);
+    dispatch(actUpdateCartAmount({
+      total: total,
+      shipping:shiping,
+      discount:discount
+    }))
   });
 
   return (

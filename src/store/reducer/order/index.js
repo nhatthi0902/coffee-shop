@@ -2,6 +2,7 @@ import {
   ACT_UPDATE_SHIPMENT_INFO,
   ACT_RESET_SHIPMENT_INFO,
   ACT_CHECK_VALID_INFO,
+  ACT_UPDATE_AMOUNT
 } from "../../action/order/action.type";
 const emptyInfo = {
   fullName: "",

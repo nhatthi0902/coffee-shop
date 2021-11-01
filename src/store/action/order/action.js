@@ -1,4 +1,4 @@
-import { ACT_UPDATE_SHIPMENT_INFO, ACT_RESET_SHIPMENT_INFO, ACT_CHECK_VALID_INFO } from "./action.type";
+import { ACT_UPDATE_SHIPMENT_INFO, ACT_RESET_SHIPMENT_INFO, ACT_CHECK_VALID_INFO, ACT_UPDATE_AMOUNT } from "./action.type";
 
 export function actUpdateSipmentInfo(info){
     return{

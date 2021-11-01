@@ -1,0 +1,28 @@
+.order-summary {
+  & .shipment-infomation {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    & label {
+      font-weight: bold;
+    }
+  }
+
+  & .back-to-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .btn-continue {
+      margin-top: 2rem;
+      height: 3rem;
+      width: 40%;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      font-family: "open_sansregular";
+      background-color: #d5b084;
+      color: #f5f1e6;
+    }
+  }
+}
