@@ -8,8 +8,8 @@ export const containerStyle = {
 
 // Center on Kalmar
 export const center = {
-    lat:  10.83543883123354,
-    lng: 106.80755513950464
+  lat: 10.844748403366491,
+  lng: 106.78945623384644,
 };
 
 // Disable default UI

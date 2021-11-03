@@ -1,7 +1,11 @@
 import "./home.scss";
 import Banner from "../../component/Banner";
 import Section from "../../component/Section";
+import React,{useEffect} from "react";
 function Home() {
+  useEffect(() => {
+    document.getElementsByTagName('title')[0].value = "Mộc Coffee - Home"
+  }, [])
   return (
     <>
       <Banner

@@ -17,6 +17,7 @@ import {
 } from "../../store/action/order/action";
 import { actResetCart } from "../../store/action/cart";
 import OrderSummary from "../../component/OrderSummary";
+import Banner from "../../component/Banner";
 export default function Order() {
   const [selectedPayment, setSelectedPayment] = useState(1);
   const [confirm, setConfirm] = useState(false);
@@ -31,6 +32,7 @@ export default function Order() {
   console.log("CART: ", cartInfo);
   const dispatch = useDispatch();
   useEffect(() => {
+    document.getElementsByTagName('title')[0].innerHTML = "Mộc Coffee - Location"
     dispatch(actGetCart());
     dispatch(actResetSipmentInfo());
     dispatch(actCheckValidSipmentInfo());
@@ -52,6 +54,8 @@ export default function Order() {
   }
 
   return (
+    <>
+    <Banner type="banner-order"/>
     <Container>
       {!confirm && (
         <Row>
@@ -87,5 +91,6 @@ export default function Order() {
         />
       )}
     </Container>
+    </>
   );
 }

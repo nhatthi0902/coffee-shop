@@ -3,6 +3,7 @@
   background-size: 100% 100%;
   display: flex;
   align-items: center;
+  height: 15rem;
 
   &.banner-home {
     background-image: url("../../assets/images/headline-home.jpg");
@@ -21,7 +22,6 @@
 
   &.banner-menu {
     background-image: url("../../assets/images/headline-blog.jpg");
-    height: 15rem;
     & h1 {
       font-family: "UltraRegular";
       font-weight: bold;
@@ -30,5 +30,13 @@
       color: #d1a36b;
       max-width: 80%;
     }
+  }
+
+  &.banner-location {
+    background-image: url("../../assets/images/headline-locations.jpg");
+  }
+
+  &.banner-order {
+    background-image: url("../../assets/images/headline-menu.jpg");
   }
 }

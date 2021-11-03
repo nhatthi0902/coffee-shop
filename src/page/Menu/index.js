@@ -19,6 +19,7 @@ export default function Menu() {
   useEffect(() => {
     dispatch(actGetAllProductPerPage(1));
     dispatch(actNavigate(2));
+    document.getElementsByTagName('title')[0].value = "Mộc Coffee - Location"
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   const currentMenuData = useSelector(
